@@ -61,6 +61,11 @@ body {
     margin-top: 20px;
 }
 
+.painelA
+{
+	padding-left: 185px;	
+}
+
 .rightCol {
     float: left;
     width: 25%;
@@ -87,6 +92,15 @@ body {
         width: 100%;
         padding: 0;
     }
+    .painelA{
+		padding-left: 10px;
+	}
+	.iframe{
+		padding-left: 100px;
+		width: 300px;
+		height: 200px;
+	}
+    
 }
 
 @media screen and (max-width: 400px){
