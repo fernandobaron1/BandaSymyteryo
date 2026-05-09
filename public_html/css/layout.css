@@ -8,22 +8,35 @@
 }
 
 /* ============================================================
+   ESPAÇAMENTO GLOBAL ENTRE ELEMENTOS
+   ============================================================ */
+p {
+    margin-bottom: 12px; /* espaçamento mínimo entre parágrafos */
+}
+
+.card > *:not(:last-child) {
+    margin-bottom: 16px; /* espaçamento interno entre elementos do card */
+}
+
+.row > * {
+    margin-bottom: 20px; /* espaçamento entre colunas no mobile */
+}
+
+/* ============================================================
    LAYOUT GERAL
    ============================================================ */
 .row {
     display: flex;
     flex-wrap: wrap;
+    gap: 20px; /* espaçamento entre colunas */
 }
 
-/* Colunas */
 .leftCol {
     flex: 70%;
-    padding: 20px;
 }
 
 .rightCol {
     flex: 30%;
-    padding: 20px;
 }
 
 /* ============================================================
@@ -32,7 +45,6 @@
 .card {
     background: white;
     padding: 20px;
-    margin-top: 20px;
     border-radius: 6px;
 }
 
@@ -42,7 +54,7 @@
 .card div[style*="background-image"] {
     width: 100%;
     height: auto;
-    padding-top: 60%; /* mantém proporção */
+    padding-top: 60%;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -67,44 +79,38 @@
     color: white;
     padding: 40px 20px;
 
-    /* Garante centralização perfeita no iPhone e Android */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+
+    margin-bottom: 20px; /* espaçamento abaixo do header */
 }
 
-/* Título principal */
 .header h1 {
     font-size: 48px;
     font-weight: 800;
     letter-spacing: 2px;
     text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
-/* Subtítulo */
 .header p {
     font-size: 20px;
-    margin-top: 10px;
     opacity: 0.85;
 }
 
 /* ============================================================
    RESPONSIVIDADE
    ============================================================ */
-
-/* Tablets e telas médias */
 @media screen and (max-width: 900px) {
     .leftCol, .rightCol {
         flex: 100%;
-        padding: 10px;
     }
 }
 
-/* Celulares */
 @media screen and (max-width: 600px) {
-
     .header h1 {
         font-size: 32px;
     }
