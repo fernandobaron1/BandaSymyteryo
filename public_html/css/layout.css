@@ -57,3 +57,38 @@
         padding: 15px;
     }
 }
+
+/* Estilo do cabeçalho */
+.header {
+    text-align: center;
+    padding: 40px 20px;
+    background: #111;
+    color: white;
+}
+
+/* Título principal */
+.header h1 {
+    font-size: 48px;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Subtítulo */
+.header p {
+    font-size: 20px;
+    margin-top: 10px;
+    opacity: 0.85;
+}
+
+/* Responsividade */
+@media screen and (max-width: 600px) {
+    .header h1 {
+        font-size: 32px;
+    }
+
+    .header p {
+        font-size: 16px;
+    }
+}
