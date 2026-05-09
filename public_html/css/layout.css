@@ -1,9 +1,15 @@
-body, h1, h2, h3, p {
+/* ============================================================
+   RESET UNIVERSAL — garante espaçamento igual no iPhone e Android
+   ============================================================ */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* Layout geral */
+/* ============================================================
+   LAYOUT GERAL
+   ============================================================ */
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -20,7 +26,9 @@ body, h1, h2, h3, p {
     padding: 20px;
 }
 
-/* Cards */
+/* ============================================================
+   CARDS
+   ============================================================ */
 .card {
     background: white;
     padding: 20px;
@@ -28,7 +36,9 @@ body, h1, h2, h3, p {
     border-radius: 6px;
 }
 
-/* Imagens responsivas */
+/* ============================================================
+   IMAGENS RESPONSIVAS
+   ============================================================ */
 .card div[style*="background-image"] {
     width: 100%;
     height: auto;
@@ -38,44 +48,37 @@ body, h1, h2, h3, p {
     background-position: center;
 }
 
-/* Iframes responsivos */
+/* ============================================================
+   IFRAMES RESPONSIVOS
+   ============================================================ */
 .iframe {
     width: 100%;
     height: auto;
     aspect-ratio: 16/9;
+    border: none;
 }
 
-/* ======== RESPONSIVIDADE ======== */
-@media screen and (max-width: 900px) {
-    .leftCol, .rightCol {
-        flex: 100%;
-        padding: 10px;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    h1 {
-        font-size: 28px;
-    }
-
-    .card {
-        padding: 15px;
-    }
-}
-
-/* Estilo do cabeçalho */
+/* ============================================================
+   CABEÇALHO
+   ============================================================ */
 .header {
-    text-align: center;
-    padding: 40px 20px;
+    width: 100%;
     background: #111;
     color: white;
+    padding: 40px 20px;
+
+    /* Garante centralização perfeita no iPhone e Android */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 /* Título principal */
 .header h1 {
     font-size: 48px;
     font-weight: 800;
-    margin: 0;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
@@ -87,13 +90,30 @@ body, h1, h2, h3, p {
     opacity: 0.85;
 }
 
-/* Responsividade */
+/* ============================================================
+   RESPONSIVIDADE
+   ============================================================ */
+
+/* Tablets e telas médias */
+@media screen and (max-width: 900px) {
+    .leftCol, .rightCol {
+        flex: 100%;
+        padding: 10px;
+    }
+}
+
+/* Celulares */
 @media screen and (max-width: 600px) {
+
     .header h1 {
         font-size: 32px;
     }
 
     .header p {
         font-size: 16px;
+    }
+
+    .card {
+        padding: 15px;
     }
 }
