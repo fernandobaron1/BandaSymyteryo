@@ -1,5 +1,5 @@
 /* ============================================================
-   RESET UNIVERSAL — garante espaçamento igual no iPhone e Android
+   RESET UNIVERSAL
    ============================================================ */
 * {
     margin: 0;
@@ -8,18 +8,18 @@
 }
 
 /* ============================================================
-   ESPAÇAMENTO GLOBAL ENTRE ELEMENTOS
+   ESPAÇAMENTO GLOBAL
    ============================================================ */
 p {
-    margin-bottom: 12px; /* espaçamento mínimo entre parágrafos */
+    margin-bottom: 12px;
 }
 
 .card > *:not(:last-child) {
-    margin-bottom: 16px; /* espaçamento interno entre elementos do card */
+    margin-bottom: 16px;
 }
 
 .row > * {
-    margin-bottom: 20px; /* espaçamento entre colunas no mobile */
+    margin-bottom: 20px;
 }
 
 /* ============================================================
@@ -28,7 +28,7 @@ p {
 .row {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* espaçamento entre colunas */
+    gap: 20px;
 }
 
 .leftCol {
@@ -49,23 +49,57 @@ p {
 }
 
 /* ============================================================
-   IMAGENS RESPONSIVAS
+   LINHA FULL-WIDTH PARA AS 3 PRIMEIRAS FOTOS
    ============================================================ */
-.card div[style*="background-image"] {
+.row-full {
     width: 100%;
-    height: auto;
-    padding-top: 60%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+
+.row-full .leftCol {
+    width: 100%;
+    flex: 100%;
 }
 
 /* ============================================================
-   IFRAMES RESPONSIVOS
+   IMAGENS FULL-WIDTH (3 PRIMEIROS CARDS)
+   ============================================================ */
+.row-full .card div[style*="background-image"] {
+    width: 100vw;                 /* ocupa toda a largura da tela */
+    margin-left: 50%;             /* centraliza */
+    transform: translateX(-50%);  /* corrige o deslocamento */
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 0;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .row-full .card div[style*="background-image"] {
+        height: 220px;
+    }
+}
+
+/* ============================================================
+   IMAGENS NORMAIS (OUTROS CARDS)
+   ============================================================ */
+.card div[style*="background-image"] {
+    width: 100%;
+    padding-top: 60%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 6px;
+}
+
+/* ============================================================
+   IFRAMES
    ============================================================ */
 .iframe {
     width: 100%;
-    height: auto;
     aspect-ratio: 16/9;
     border: none;
 }
@@ -78,14 +112,8 @@ p {
     background: #111;
     color: white;
     padding: 40px 20px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     text-align: center;
-
-    margin-bottom: 20px; /* espaçamento abaixo do header */
+    margin-bottom: 20px;
 }
 
 .header h1 {
@@ -124,8 +152,4 @@ p {
     }
 }
 
-.foto-full {
-  width: 100%;
-  height: auto;
-}
 
