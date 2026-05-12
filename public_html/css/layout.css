@@ -81,17 +81,17 @@ p {
 
 /* FOTO 1 — Cartaz do evento */
 .row-full .card:nth-of-type(1) div[style*="background-image"] {
-    padding-top: 140%;
+    padding-top: 160%;
 }
 
 /* FOTO 2 — Foto da banda */
 .row-full .card:nth-of-type(2) div[style*="background-image"] {
-    padding-top: 70%;
+    padding-top: 85%;
 }
 
 /* FOTO 3 — Mapa das mesas */
 .row-full .card:nth-of-type(3) div[style*="background-image"] {
-    padding-top: 95%;
+    padding-top: 110%;
 }
 
 
