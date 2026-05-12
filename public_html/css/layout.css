@@ -128,3 +128,29 @@ p {
   width: 100%;
   height: auto;
 }
+
+.foto-full,
+.imgBox {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0; /* remove cantos arredondados, se houver */
+}
+
+/* Altura fixa opcional (pode ajustar) */
+.foto-full {
+    height: 300px;
+}
+
+.imgBox {
+    height: 250px;
+}
+
+/* Responsivo para celular */
+@media (max-width: 768px) {
+    .foto-full,
+    .imgBox {
+        height: 200px; /* ajuste para telas menores */
+    }
+}
