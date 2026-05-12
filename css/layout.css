@@ -1,0 +1,130 @@
+/* ============================================================
+   RESET UNIVERSAL — garante espaçamento igual no iPhone e Android
+   ============================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ============================================================
+   ESPAÇAMENTO GLOBAL ENTRE ELEMENTOS
+   ============================================================ */
+p {
+    margin-bottom: 12px; /* espaçamento mínimo entre parágrafos */
+}
+
+.card > *:not(:last-child) {
+    margin-bottom: 16px; /* espaçamento interno entre elementos do card */
+}
+
+.row > * {
+    margin-bottom: 20px; /* espaçamento entre colunas no mobile */
+}
+
+/* ============================================================
+   LAYOUT GERAL
+   ============================================================ */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* espaçamento entre colunas */
+}
+
+.leftCol {
+    flex: 70%;
+}
+
+.rightCol {
+    flex: 30%;
+}
+
+/* ============================================================
+   CARDS
+   ============================================================ */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+/* ============================================================
+   IMAGENS RESPONSIVAS
+   ============================================================ */
+.card div[style*="background-image"] {
+    width: 100%;
+    height: auto;
+    padding-top: 60%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* ============================================================
+   IFRAMES RESPONSIVOS
+   ============================================================ */
+.iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    border: none;
+}
+
+/* ============================================================
+   CABEÇALHO
+   ============================================================ */
+.header {
+    width: 100%;
+    background: #111;
+    color: white;
+    padding: 40px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    margin-bottom: 20px; /* espaçamento abaixo do header */
+}
+
+.header h1 {
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 20px;
+    opacity: 0.85;
+}
+
+/* ============================================================
+   RESPONSIVIDADE
+   ============================================================ */
+@media screen and (max-width: 900px) {
+    .leftCol, .rightCol {
+        flex: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header h1 {
+        font-size: 32px;
+    }
+
+    .header p {
+        font-size: 16px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+}
+
+.foto-full {
+  width: 100%;
+  height: auto;
+}
