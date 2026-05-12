@@ -154,3 +154,21 @@ p {
         height: 200px; /* ajuste para telas menores */
     }
 }
+
+.card .foto-full,
+.card .imgBox {
+    width: 100vw;              /* ocupa 100% da largura da tela */
+    margin-left: 50%;
+    transform: translateX(-50%); /* centraliza */
+    height: 300px;             /* ajuste conforme desejar */
+    background-size: cover;
+    background-position: center;
+    border-radius: 0;
+}
+
+@media (max-width: 768px) {
+    .card .foto-full,
+    .card .imgBox {
+        height: 220px;
+    }
+}
