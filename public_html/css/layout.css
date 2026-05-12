@@ -55,16 +55,13 @@ p {
    ============================================================ */
 
 .card div[style*="background-image"] {
-    width: 100vw;                 /* ocupa toda a largura da tela */
-    margin-left: 50%;             /* centraliza */
-    transform: translateX(-50%);  /* corrige o deslocamento */
-    height: 300px;                /* altura fixa */
-    background-size: cover;       /* agora sim preenche a tela */
-    background-position: center;
+    width: 100%;
+    height: auto;
+    padding-top: 60%;
+    background-size: contain;
     background-repeat: no-repeat;
-    border-radius: 0;
+    background-position: center;
 }
-
 
 /* ============================================================
    IFRAMES RESPONSIVOS
@@ -133,55 +130,5 @@ p {
 .foto-full {
   width: 100%;
   height: auto;
-}
-
-.foto-full,
-.imgBox {
-    width: 100%;
-    height: auto;
-    background-size: cover;
-    background-position: center;
-    border-radius: 0; /* remove cantos arredondados, se houver */
-}
-
-/* Altura fixa opcional (pode ajustar) */
-.foto-full {
-    height: 300px;
-}
-
-.imgBox {
-    height: 250px;
-}
-
-/* Responsivo para celular */
-@media (max-width: 768px) {
-    .foto-full,
-    .imgBox {
-        height: 200px; /* ajuste para telas menores */
-    }
-}
-
-.card .foto-full,
-.card .imgBox {
-    width: 100vw;              /* ocupa 100% da largura da tela */
-    margin-left: 50%;
-    transform: translateX(-50%); /* centraliza */
-    height: 300px;             /* ajuste conforme desejar */
-    background-size: cover;
-    background-position: center;
-    border-radius: 0;
-}
-
-@media (max-width: 768px) {
-    .card .foto-full,
-    .card .imgBox {
-        height: 220px;
-    }
-}
-
-@media (max-width: 768px) {
-    .card div[style*="background-image"] {
-        height: 220px;
-    }
 }
 
