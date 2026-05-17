@@ -180,7 +180,7 @@ p {
     width: 100vw;
     margin-left: 50%;
     transform: translateX(-50%);
-    padding-top: 180%; /* aumenta a área visível */
+    padding-top: 150%; /* aumenta a área visível */
     background-size: cover;
     background-position: top center; /* mostra mais do topo */
     background-repeat: no-repeat;
